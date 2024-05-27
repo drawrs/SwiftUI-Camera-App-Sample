@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		36A487772C0473B9003695EF /* SwiftUI_Camera_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A487762C0473B9003695EF /* SwiftUI_Camera_AppApp.swift */; };
-		36A487792C0473B9003695EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A487782C0473B9003695EF /* ContentView.swift */; };
 		36A4877B2C0473BB003695EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A4877A2C0473BB003695EF /* Assets.xcassets */; };
 		36A4877E2C0473BB003695EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A4877D2C0473BB003695EF /* Preview Assets.xcassets */; };
+		36A487852C047411003695EF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A487842C047411003695EF /* Camera.swift */; };
+		36A487892C047421003695EF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A487882C047421003695EF /* DataModel.swift */; };
+		36A4878B2C04742B003695EF /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4878A2C04742B003695EF /* ScanView.swift */; };
+		36A4878D2C047435003695EF /* ViewFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A4878C2C047435003695EF /* ViewFinderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		36A487732C0473B9003695EF /* SwiftUI Camera App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Camera App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A487762C0473B9003695EF /* SwiftUI_Camera_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Camera_AppApp.swift; sourceTree = "<group>"; };
-		36A487782C0473B9003695EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36A4877A2C0473BB003695EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A4877D2C0473BB003695EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36A487842C047411003695EF /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		36A487882C047421003695EF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		36A4878A2C04742B003695EF /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		36A4878C2C047435003695EF /* ViewFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFinderView.swift; sourceTree = "<group>"; };
+		36A4878E2C0474CD003695EF /* SwiftUI-Camera-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Camera-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		36A487752C0473B9003695EF /* SwiftUI Camera App */ = {
 			isa = PBXGroup;
 			children = (
+				36A4878E2C0474CD003695EF /* SwiftUI-Camera-App-Info.plist */,
 				36A487762C0473B9003695EF /* SwiftUI_Camera_AppApp.swift */,
-				36A487782C0473B9003695EF /* ContentView.swift */,
+				36A487842C047411003695EF /* Camera.swift */,
+				36A487882C047421003695EF /* DataModel.swift */,
+				36A4878A2C04742B003695EF /* ScanView.swift */,
+				36A4878C2C047435003695EF /* ViewFinderView.swift */,
 				36A4877A2C0473BB003695EF /* Assets.xcassets */,
 				36A4877C2C0473BB003695EF /* Preview Content */,
 			);
@@ -137,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A487792C0473B9003695EF /* ContentView.swift in Sources */,
+				36A487892C047421003695EF /* DataModel.swift in Sources */,
 				36A487772C0473B9003695EF /* SwiftUI_Camera_AppApp.swift in Sources */,
+				36A487852C047411003695EF /* Camera.swift in Sources */,
+				36A4878D2C047435003695EF /* ViewFinderView.swift in Sources */,
+				36A4878B2C04742B003695EF /* ScanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +289,14 @@
 				DEVELOPMENT_TEAM = 73TW42T8UJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Camera-App-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +321,14 @@
 				DEVELOPMENT_TEAM = 73TW42T8UJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Camera-App-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need camera access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
